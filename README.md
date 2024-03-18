@@ -1,10 +1,3 @@
-![itemlist](https://github.com/CBocka/Invoice/assets/156449965/aabddcd9-8cc8-45cb-8a3e-03d7fa55f146)# PROYECTO INVOICE 
-</br>
-<p align="center">
-<img src="https://github.com/CBocka/Invoice/assets/156449965/1636ad05-75e6-4940-9b34-cf34a85bdced" height="450" width="220" >
-</p>
-</br>
-
 ## DESCRIPCIÓN DEL PROYECTO
 
 Invoice es la aplicación que se realizará de manera modular para el estudio de todo el temario de ✨DEINT.✨
@@ -111,11 +104,11 @@ Una vez activadas, no se pueden desactivar desde esta opción.
 
 Al iniciar la aplicación por primera vez tras ser instalada se pedirán los permisos de notificaciones.
 
-</br>
-
 ### - Lista de Usuarios
 
 Listado con los usuarios creados mediante la vista de Sign Up. Pueden ser eliminados mediante una pulsación larga sobre el elemento deseado.
+
+</br>
 
 ### - Módulo Item
 </br>
