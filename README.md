@@ -1,3 +1,10 @@
+
+</br>
+<p align="center">
+<img src="https://github.com/CBocka/Invoice/assets/156449965/6dc19187-0a4b-4507-82f5-7e69b269646d" height="450" width="220" >
+</p>
+</br>
+
 ## DESCRIPCIÓN DEL PROYECTO
 
 Invoice es la aplicación que se realizará de manera modular para el estudio de todo el temario de ✨DEINT.✨
