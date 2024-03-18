@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="errIdIsMandatoryError">Debe escribir un ID</string>
+    <string name="errIdFormatError">Formato de ID no válido</string>
+    <string name="errNameIsMandatoryError">Debe escribir un nombre</string>
+    <string name="errPriceIsMandatoryError">Debe escribir un precio</string>
+</resources>

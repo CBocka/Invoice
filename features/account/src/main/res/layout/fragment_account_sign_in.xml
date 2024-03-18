@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.hamilton.account.ui.signin.usecase.SignInViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/linearLayoutSignIn_padding"
+        tools:context="com.hamilton.account.ui.signin.SignInFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmailSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/SingInLayout_margin"
+            style="@style/SignInTextInputLayout"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieEmailSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.email}"
+                android:hint="@string/tieEmail_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPasswordSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/SingInLayout_margin"
+            app:endIconMode="password_toggle"
+            style="@style/SignInTextInputLayout"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiePasswordSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text="@={viewmodel.password}"
+                android:hint="@string/tiePassword_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chkRememberMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/SingInLayout_margin"
+                android:layout_weight="0.8"
+                android:text="@string/chkRememberMe_text" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/SingInLayout_margin"
+                android:layout_weight="0.2"
+                android:onClick="@{() -> viewmodel.validateCredentials()}"
+                android:text="@string/btnLogin_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvRegisterAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:layout_margin="@dimen/SingInLayout_margin"
+                android:gravity="bottom|center_horizontal"
+                android:text="@string/tvRregisterAccount_text" />
+
+            <Button
+                android:id="@+id/btnRegisterAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/SingInLayout_margin"
+                android:layout_weight="0.2"
+                style="@style/ButtonTransparent"
+                android:text="@string/btnRegisterAccount_text" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvOtherPlatform"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/SingInLayout_margin"
+            android:gravity="bottom|center_horizontal"
+            style="@style/InvoiceTitleSmall"
+            android:text="@string/tvOtherPlatforms_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imgbtnGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/SingInLayout_margin"
+                android:background="@android:color/transparent"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_google" />
+
+            <ImageButton
+                android:id="@+id/imgbtnFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/SingInLayout_margin"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/ic_facebook" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

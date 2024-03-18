@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/nav_graph_item"
+    app:startDestination="@id/itemListFragment">
+
+    <fragment
+        app:moduleName="item"
+        android:id="@+id/itemListFragment"
+        android:name="com.hamilton.item.ui.ItemListFragment"
+        android:label="@string/title_itemlist" >
+        <action
+            android:id="@+id/action_itemListFragment_to_itemCreationFragment"
+            app:destination="@+id/itemCreationFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_itemDetailFragment"
+            app:destination="@+id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_fragmentProgressDialog"
+            app:destination="@id/fragmentProgressDialog2" />
+        <action
+            android:id="@+id/action_itemListFragment_to_baseFragmentDialog"
+            app:destination="@id/baseFragmentDialog" />
+    </fragment>
+    <fragment
+        app:moduleName="item"
+        android:id="@+id/itemCreationFragment"
+        android:name="com.hamilton.item.ui.ItemCreationFragment"
+        android:label="@string/title_itemcreation" >
+        <action
+            android:id="@+id/action_itemCreationFragment_to_oneOptionDialog"
+            app:destination="@id/oneOptionDialog" />
+    </fragment>
+    <fragment
+        app:moduleName="item"
+        android:id="@+id/itemDetailFragment"
+        android:name="com.hamilton.item.ui.ItemDetailFragment"
+        android:label="@string/title_itemdetail" >
+        <action
+            android:id="@+id/action_itemDetailFragment_to_itemUpdateFragment"
+            app:destination="@id/itemUpdateFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/fragmentProgressDialog2"
+        android:name="com.hamilton.invoice.base.FragmentProgressDialog"
+        android:label="FragmentProgressDialog" />
+    <dialog
+        android:id="@+id/baseFragmentDialog"
+        android:name="com.hamilton.invoice.base.BaseFragmentDialog"
+        android:label="BaseFragmentDialog" />
+    <fragment
+        android:id="@+id/itemUpdateFragment"
+        android:name="com.hamilton.item.ui.ItemUpdateFragment"
+        android:label="@string/title_itemupdate" />
+    <dialog
+        android:id="@+id/oneOptionDialog"
+        android:name="OneOptionDialog"
+        android:label="OneOptionDialog" />
+</navigation>

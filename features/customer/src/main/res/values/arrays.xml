@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="orderby_entries">
+        <item>Name</item>
+        <item>ID</item>
+        <item>Email</item>
+    </string-array>
+    <string-array name="orderby_values">
+        <item>NM</item>
+        <item>ID</item>
+        <item>EM</item>
+    </string-array>
+</resources>

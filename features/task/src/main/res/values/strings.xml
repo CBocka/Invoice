@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tvNoData_text">Aún no hay Tareas</string>
+    <string name="tvNoDataSubtitle_text">Toca el botón \"+\" para añadir una Tarea</string>
+    <string name="toolbar_refresh_title">Refrescar</string>
+    <string name="toolbar_sort_title">Ordenar</string>
+    <string name="toolbar_edit_title">Editar</string>
+    <string name="task_item_completed">Completada</string>
+
+    <string name="dialogDeleteTask_title">Eliminar Tarea</string>
+    <string name="dialogDeleteTask_message">¿Seguro que quiere eliminar la tarea?</string>
+    <string name="tvInfoDetails">Informacion de la Tarea</string>
+    <string name="tvDetailsAdditionalInfo">Informacion Adicional</string>
+    <string name="tv_details_id">ID Tarea</string>
+    <string name="tv_details_name">Nombre Cliente</string>
+    <string name="tv_details_contact">Persona de Contacto</string>
+    <string name="tv_details_initial_date">Fecha de inicio</string>
+    <string name="tv_details_end_date">Fecha de finalización</string>
+    <string name="tv_details_type">Tipo de tarea</string>
+    <string name="tilTaskNote_text">Comentario</string>
+    <string name="tilTaskEndDate_text">Fecha de fin</string>
+    <string name="tilTaskInitialDate_text">Fecha de inicio</string>
+    <string name="tilTaskName_text">Nombre de tarea</string>
+    <string name="swCompleted_text">¿Completada?</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="errNameIsMandatoryError">Debe especificar un nombre</string>
+    <string name="errInitDateIsMandatoryError">Debe especificar fecha de inicio</string>
+    <string name="errEndDateIsMandatoryError">Debe especificar fecha de fin</string>
+</resources>

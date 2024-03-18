@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.hamilton.item.usecase.create.ItemCreationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.ItemCreationFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilItemId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tilItemId"
+            app:errorEnabled="true"
+            app:hintAnimationEnabled="true"
+            android:layout_margin="@dimen/til_margin"
+            app:startIconDrawable="@drawable/ic_id">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieItemId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.id}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/til_margin"
+            app:errorEnabled="true"
+            app:hintAnimationEnabled="true"
+            android:hint="@string/tilItemName"
+            app:startIconDrawable="@drawable/ic_item_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.name}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilItemPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:hintAnimationEnabled="true"
+            android:layout_margin="@dimen/til_margin"
+            android:hint="@string/tilItemPrice"
+            app:startIconDrawable="@drawable/ic_item_price">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieItemPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text="@={viewmodel.price}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinnerItemType"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/til_margin" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilItemDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true"
+            android:layout_margin="@dimen/til_margin"
+            android:hint="@string/tilItemDesc"
+            app:startIconDrawable="@drawable/ic_invoice_edit">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieItemDesc"
+                android:layout_width="match_parent"
+                android:text="@={viewmodel.description}"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchItemTaxable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="@={viewmodel.isTaxable}"
+            android:layout_margin="@dimen/til_margin"
+            android:textSize="@dimen/itemCreation_text_size"
+            android:text="@string/switchItemTaxable_text" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilItemTax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/til_margin"
+            android:hint="@string/tilItemTax"
+            app:startIconDrawable="@drawable/ic_tax_icon"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieItemTax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.tax}"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="@dimen/itemCreation_fab_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_item_add" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

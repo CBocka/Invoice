@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.hamilton.task.usecase.create.TaskCreationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.hamilton.task.ui.TaskCreationFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTaskName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_margin"
+            android:hint="@string/tilTaskName_text"
+            app:hintAnimationEnabled="true"
+            app:startIconDrawable="@drawable/ic_user_add">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieTaskName"
+                android:text="@={viewmodel.name}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinnerTaskCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/btn_margin" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTaskInitialDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_invoice_calendar"
+            android:hint="@string/tilTaskInitialDate_text"
+            android:layout_margin="@dimen/btn_margin">
+
+            <EditText
+                android:id="@+id/tieTaskInitialDate"
+                android:text="@={viewmodel.initialDate}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTaskEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tilTaskEndDate_text"
+            app:hintAnimationEnabled="true"
+            app:startIconDrawable="@drawable/ic_invoice_calendar"
+            android:layout_margin="@dimen/btn_margin">
+
+            <EditText
+                android:id="@+id/tieTaskEndDate"
+                android:text="@={viewmodel.endDate}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTaskNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_margin"
+            app:startIconDrawable="@drawable/ic_invoice_add"
+            android:hint="@string/tilTaskNote_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieTaskNote"
+                android:text="@={viewmodel.note}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinnerTaskType"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/btn_margin" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_add_task"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>
+

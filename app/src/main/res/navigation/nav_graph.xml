@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.hamilton.invoice.SplashFragment"
+        android:label="@string/title_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.hamilton.invoice.MainFragment"
+        android:label="@string/mainFragment"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_nav_graph_account"
+            app:destination="@id/nav_graph_account"/>
+        <action
+            android:id="@+id/action_mainFragment_to_nav_graph_item"
+            app:destination="@id/nav_graph_item"/>
+        <action
+            android:id="@+id/action_mainFragment_to_nav_graph_customer"
+            app:destination="@id/nav_graph_customer"/>
+        <action
+            android:id="@+id/action_mainFragment_to_nav_graph_invoice"
+            app:destination="@id/nav_graph_invoice"/>
+        <action
+            android:id="@+id/action_mainFragment_to_nav_graph_task"
+            app:destination="@id/nav_graph_task"/>
+        <action
+            android:id="@+id/action_mainFragment_to_userListFragment"
+            app:destination="@id/userListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.hamilton.account.ui.userlist.UserListFragment"
+        android:label="@string/title_userList"
+        tools:layout="@layout/fragment_user_list">
+        <action
+            android:id="@+id/action_userListFragment_to_fragmentProgressDialog"
+            app:destination="@id/fragmentProgressDialog" />
+    </fragment>
+    <include-dynamic
+        android:id="@+id/nav_graph_account"
+        app:graphPackage="${applicationId}.account"
+        app:graphResName="nav_graph_account"
+        app:moduleName="account"/>
+    <include-dynamic
+        android:id="@+id/nav_graph_item"
+        app:graphPackage="${applicationId}.item"
+        app:graphResName="nav_graph_item"
+        app:moduleName="item"/>
+    <include-dynamic
+        android:id="@+id/nav_graph_customer"
+        app:graphPackage="${applicationId}.customer"
+        app:graphResName="nav_graph_customer"
+        app:moduleName="customer"/>
+    <include-dynamic
+        android:id="@+id/nav_graph_invoice"
+        app:graphPackage="${applicationId}.featureinvoice"
+        app:graphResName="nav_graph_invoice"
+        app:moduleName="featureinvoice"/>
+    <include-dynamic
+        android:id="@+id/nav_graph_task"
+        app:graphPackage="${applicationId}.task"
+        app:graphResName="nav_graph_task"
+        app:moduleName="task"/>
+    <dialog
+        android:id="@+id/fragmentProgressDialog"
+        android:name="com.hamilton.invoice.base.FragmentProgressDialog"
+        android:label="FragmentProgressDialog" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.hamilton.invoice.preferences.SettingsFragment"
+        android:label="@string/settings_fragment_label" >
+        <action
+            android:id="@+id/action_settingsFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.hamilton.invoice.preferences.AccountFragment"
+        android:label="@string/account_fragment_label" />
+</navigation>

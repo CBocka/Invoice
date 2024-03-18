@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.InvoiceDetailFragment"
+    android:background="@drawable/imagenfondo_featureinvoicedetail">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewFatura"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/imagenfondo_recyclerview_invoice">
+
+
+            <TextView
+                android:id="@+id/tvInfoID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="ID"
+                android:textColor="#FFFFFF"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintStart_toStartOf="@+id/tvNombreFactura"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombreFactura" />
+
+            <TextView
+                android:id="@+id/tvID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintStart_toStartOf="@+id/tvInfoID"
+                app:layout_constraintTop_toBottomOf="@+id/tvInfoID" />
+
+            <TextView
+                android:id="@+id/tvInfoFactura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Informacion de la factura"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDetailNombreCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Nombre de cliente"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintStart_toStartOf="@+id/tvID"
+                app:layout_constraintTop_toBottomOf="@+id/tvID" />
+
+            <TextView
+                android:id="@+id/tvNombreCliente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:text="Fermin Anselmo XIV rey de su casa/Teruel/España"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvDetailNombreCliente"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetailNombreCliente" />
+
+            <TextView
+                android:id="@+id/tvDetailFechaE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Fecha Emisión"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintStart_toStartOf="@+id/tvNombreCliente"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombreCliente" />
+
+            <TextView
+                android:id="@+id/tvFechaEmision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="3/3/14"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintStart_toStartOf="@+id/tvDetailFechaE"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetailFechaE" />
+
+            <TextView
+                android:id="@+id/tvDetailFechaV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Fecha Vencimiento"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintStart_toStartOf="@+id/tvFechaEmision"
+                app:layout_constraintTop_toBottomOf="@+id/tvFechaEmision" />
+
+            <TextView
+                android:id="@+id/tvFechaVencimiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
+                android:text="7/7/14"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvDetailFechaV"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetailFechaV"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tvDetailNombreFactura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Nombre de la factura"
+                android:textColor="#FFFFFF"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintStart_toStartOf="@+id/tvInfoFactura"
+                app:layout_constraintTop_toBottomOf="@+id/tvInfoFactura" />
+
+            <TextView
+                android:id="@+id/tvNombreFactura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="Factura Molona"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintStart_toStartOf="@+id/tvDetailNombreFactura"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetailNombreFactura" />
+
+            <TextView
+                android:id="@+id/tvDetailArticulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Articulo"
+                android:textColor="#FFFFFF"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintStart_toStartOf="@+id/tvFechaVencimiento"
+                app:layout_constraintTop_toBottomOf="@+id/tvFechaVencimiento" />
+
+            <TextView
+                android:id="@+id/tvArticulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Coche Molon"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:fontFamily="@font/horizon"
+                app:layout_constraintStart_toStartOf="@+id/tvDetailArticulo"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetailArticulo" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="65dp"
+                android:layout_height="59dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/ic_edit_invoice"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

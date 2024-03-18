@@ -1,0 +1,131 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.hamilton.task.usecase.update.TaskUpdateViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.TaskUpdateFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context="com.hamilton.task.ui.TaskUpdateFragment">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTaskName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/update_task_margin"
+                    android:hint="@string/tilTaskName_text"
+                    app:hintAnimationEnabled="true"
+                    app:startIconDrawable="@drawable/ic_user_add">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieTaskName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@={viewmodel.name}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/spinnerTaskCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/update_task_margin" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTaskInitialDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/update_task_margin"
+                    android:hint="@string/tilTaskInitialDate_text"
+                    app:startIconDrawable="@drawable/ic_invoice_calendar">
+
+                    <EditText
+                        android:id="@+id/tieTaskInitialDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:text="@={viewmodel.initialDate}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTaskEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/update_task_margin"
+                    android:hint="@string/tilTaskEndDate_text"
+                    app:hintAnimationEnabled="true"
+                    app:startIconDrawable="@drawable/ic_invoice_calendar">
+
+                    <EditText
+                        android:id="@+id/tieTaskEndDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:text="@={viewmodel.endDate}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTaskNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/update_task_margin"
+                    android:hint="@string/tilTaskNote_text"
+                    app:startIconDrawable="@drawable/ic_invoice_add">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieTaskNote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@={viewmodel.note}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/spinnerTaskType"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/update_task_margin" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swCompleted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/update_task_margin"
+                    android:checked="@={viewmodel.completed}"
+                    android:text="@string/swCompleted_text" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_update_item"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

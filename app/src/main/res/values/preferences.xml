@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="key_account">account</string>
+    <string name="summary_account">Información de la cuenta de usuario</string>
+    <string name="title_account">Cuenta de usuario</string>
+    <string name="key_active_notifications">active_notifications</string>
+    <string name="title_active_notifications">Activar notificaciones</string>
+    <string name="key_ringtone">ringtone</string>
+    <string name="title_ringtone">Tono de notificación</string>
+    <string name="category_notification">Configuración notificaciones</string>
+    <string name="category_user">Configuración usuario</string>
+    <string name="category_theme">Configuración tema</string>
+    <string name="key_account_usu">account_usu</string>
+    <string name="key_dark_theme">dark_theme</string>
+    <string name="title_dark_theme">Activar Tema Oscuro</string>
+    <string name="account_usu_title">Nombre de Usuario</string>
+    <string name="key_account_ps">account_ps</string>
+    <string name="account_ps_title">Contraseña del usuario</string>
+
+    <!-- ItemPreferences Resources -->
+    <string name="category_title">Configuración listado de productos</string>
+    <string name="key_order">item_order</string>
+    <string name="key_filter">item_filter</string>
+    <string name="title_order">Preferencias de ordenación</string>
+    <string name="title_filter">Filtro de productos</string>
+
+    <!-- CustomerPreferences Resources -->
+    <string name="customer_df_name">customer_df_name</string>
+    <string name="customer_df_name_title">Nombre por defecto</string>
+    <string name="category_view_customer">Opciones de listar</string>
+    <string name="key_active_create">create_customer</string>
+    <string name="title_active_create">Crear nuevos clientes</string>
+    <string name="key_orderby">key_orderby</string>
+    <string name="title_orderby">Ordenar por</string>
+
+    <!-- TaskPreferences Resources -->
+    <string name="task_category_title">Configuración listado de tareas</string>
+    <string name="task_key_order">task_order</string>
+    <string name="task_key_filter">task_filter</string>
+    <string name="task_title_order">Preferencias de ordenación</string>
+    <string name="task_title_filter">Filtro de tareas</string>
+
+    <!-- InvoicePreferences Resources -->
+<string name="invoice_category_title">Configuración listado facturas</string>
+    <string name="invoice_key_order">invoice_order</string>
+    <string name="invoice_title_order">Ordenar por</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "460037279814",
+    "project_id": "invoice-1d2ba",
+    "storage_bucket": "invoice-1d2ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460037279814:android:d455d9b8ced04abe57fa47",
+        "android_client_info": {
+          "package_name": "com.hamilton.invoice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5Aexv2_Qy_Wbc7MHFqfKKXGru8qLBZLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

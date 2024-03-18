@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.hamilton.featureinvoice.usecase.FeatureInvoiceViewModel" />
+    </data>
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilInvoiceFactura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/til_margin"
+                android:layout_marginTop="8dp"
+                android:hint="@string/tilInvoiceFactura"
+                app:hintAnimationEnabled="true"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:startIconDrawable="@drawable/ic_add_fab">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieInvoiceFactura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={viewmodel.billName}"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/spinnerCliente"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:dropDownWidth="200dp"
+                app:errorEnabled="true"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTextoIntroducirCliente"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvTextoIntroducirCliente"
+                app:layout_constraintTop_toTopOf="@+id/tvTextoIntroducirCliente" />
+
+            <Spinner
+                android:id="@+id/spinnerArticulo"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                app:errorEnabled="true"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTextoIntroducirArticulo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.463"
+                app:layout_constraintStart_toEndOf="@+id/tvTextoIntroducirArticulo"
+                app:layout_constraintTop_toTopOf="@+id/tvTextoIntroducirArticulo" />
+
+            <TextView
+                android:id="@+id/tvInvoiceFechaE"
+                android:layout_width="161dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="32dp"
+                android:gravity="center_vertical"
+                android:text="@string/tilInvoiceFechaE"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvListaDeObjetos" />
+
+
+            <Button
+                android:id="@+id/bInvoiceFechaE_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/til_margin"
+                android:hint="@string/tilInvoiceFecha"
+                app:hintAnimationEnabled="true"
+                app:errorEnabled="true"
+                app:layout_constraintBottom_toBottomOf="@+id/tvInvoiceFechaE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.55"
+                app:layout_constraintStart_toEndOf="@+id/tvInvoiceFechaE"
+                app:layout_constraintTop_toTopOf="@+id/tvInvoiceFechaE"
+                app:startIconDrawable="@drawable/ic_invoice_calendar"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFechaE"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_margin="@dimen/til_margin"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:hint="@string/IntroduceFactura"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInvoiceFechaE"
+                app:startIconDrawable="@drawable/ic_add_fab">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieFechaE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={viewmodel.creationDate}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvInvoiceFechaV"
+                android:layout_width="169dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:gravity="center_vertical"
+                android:text="@string/tilInvoiceFechaV"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilFechaE" />
+
+
+            <Button
+                android:id="@+id/bInvoiceFechaV_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/til_margin"
+                android:hint="@string/tilInvoiceFecha"
+                app:hintAnimationEnabled="true"
+                app:errorEnabled="true"
+                app:layout_constraintBottom_toBottomOf="@+id/tvInvoiceFechaV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.525"
+                app:layout_constraintStart_toEndOf="@+id/tvInvoiceFechaV"
+                app:layout_constraintTop_toTopOf="@+id/tvInvoiceFechaV"
+                app:startIconDrawable="@drawable/ic_invoice_calendar" />
+
+            <Button
+                android:id="@+id/btAñadirCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/til_margin"
+                android:layout_marginStart="32dp"
+                android:hint="@string/btAñadirCliente"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTextoIntroducirCliente"
+                app:startIconDrawable="@drawable/ic_invoice_calendar" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFechaV"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_margin="@dimen/til_margin"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:hint="@string/IntroduceFactura"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInvoiceFechaV"
+                app:startIconDrawable="@drawable/ic_add_fab">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieFechaV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={viewmodel.endDate}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btAñadirArticulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/til_margin"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:hint="@string/btAñadirArticulo"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTextoIntroducirArticulo"
+                app:startIconDrawable="@drawable/ic_invoice_calendar" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabCreationInvoice"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_add_invoice"
+                android:onClick="@{()->viewmodel.validateCredentials()}"/>
+
+            <TextView
+                android:id="@+id/tvTextoIntroducirCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="Selecciona el cliente"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilInvoiceFactura" />
+
+            <TextView
+                android:id="@+id/tvTextoIntroducirArticulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="Selecciona el/los articulos"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvClienteSeleccionado" />
+
+            <TextView
+                android:id="@+id/tvClienteSeleccionado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btAñadirCliente" />
+
+            <TextView
+                android:id="@+id/tvListaDeObjetos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btAñadirArticulo" />
+
+            <Button
+                android:id="@+id/btBorrarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="@string/btBorrarCliente"
+                app:layout_constraintBottom_toBottomOf="@+id/btAñadirCliente"
+                app:layout_constraintStart_toEndOf="@+id/btAñadirCliente"
+                app:layout_constraintTop_toTopOf="@+id/btAñadirCliente" />
+
+            <Button
+                android:id="@+id/btBorrarArticulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="@string/btBorrarArticulo"
+                app:layout_constraintBottom_toBottomOf="@+id/btAñadirArticulo"
+                app:layout_constraintStart_toEndOf="@+id/btAñadirArticulo"
+                app:layout_constraintTop_toTopOf="@+id/btAñadirArticulo" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</layout>

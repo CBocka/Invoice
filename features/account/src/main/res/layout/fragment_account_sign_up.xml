@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.hamilton.account.ui.signup.usercase.SignUpViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdlStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdlEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdlHorStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.051983584" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNameSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/gdlEnd"
+            app:layout_constraintStart_toStartOf="@+id/gdlStart"
+            app:layout_constraintTop_toTopOf="@+id/gdlHorStart"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieNameSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.displayName}"
+                android:hint="@string/tieNameSignUp_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmailSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toStartOf="@+id/gdlEnd"
+            app:layout_constraintStart_toStartOf="@+id/gdlStart"
+            app:layout_constraintTop_toBottomOf="@+id/tilNameSignUp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieEmailSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tieEmailSignUp_text"
+                android:text="@={viewmodel.email}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPasswordSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:endIconMode="password_toggle"
+            app:layout_constraintEnd_toStartOf="@+id/gdlEnd"
+            app:layout_constraintStart_toStartOf="@+id/gdlStart"
+            app:layout_constraintTop_toBottomOf="@+id/tilEmailSignUp"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiePasswordSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text="@={viewmodel.password}"
+                android:hint="@string/tiePasswordSignUp_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilConfirmPasswordSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:endIconMode="password_toggle"
+            app:layout_constraintEnd_toStartOf="@+id/gdlEnd"
+            app:layout_constraintStart_toStartOf="@+id/gdlStart"
+            app:layout_constraintTop_toBottomOf="@+id/tilPasswordSignUp"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieConfirmPasswordSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.repeatPassword}"
+                android:inputType="textPassword"
+                android:hint="@string/tieConfirmPasswordSignUp_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spType"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:entries="@array/typeUserArray"
+            app:layout_constraintBottom_toBottomOf="@+id/tvType"
+            app:layout_constraintEnd_toStartOf="@+id/gdlEnd"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/tvType" />
+
+        <Spinner
+            android:id="@+id/spProfile"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvProfile"
+            app:layout_constraintEnd_toStartOf="@+id/gdlEnd"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/tvProfile" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="tvType,tvProfile" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/tvType_text"
+            app:layout_constraintEnd_toEndOf="@id/barrier"
+            app:layout_constraintStart_toStartOf="@+id/gdlStart"
+            app:layout_constraintTop_toBottomOf="@+id/tilConfirmPasswordSignUp" />
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/tvProfile_text"
+            app:layout_constraintStart_toStartOf="@+id/gdlStart"
+            app:layout_constraintEnd_toEndOf="@id/barrier"
+            app:layout_constraintTop_toBottomOf="@+id/tvType" />
+
+        <Button
+            android:id="@+id/btnCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/SingInLayout_margin"
+            android:layout_weight="0.2"
+            android:text="@string/btnCreateAccount_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gdlEnd"
+            app:layout_constraintStart_toStartOf="@+id/gdlStart"
+            app:layout_constraintTop_toBottomOf="@+id/spProfile"
+            app:layout_constraintVertical_bias="0.19999999" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

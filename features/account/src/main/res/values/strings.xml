@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tvOtherPlatforms_text">Inicia sesión a través de otras plataformas</string>
+    <string name="tieEmail_text">Introduce tu email</string>
+    <string name="tiePassword_text">Introduce tu contraseña</string>
+    <string name="chkRememberMe_text">Recordar usuario</string>
+    <string name="btnLogin_text">Iniciar Sesión</string>
+    <string name="tvRregisterAccount_text">¿No tienes una cuenta?</string>
+    <string name="btnRegisterAccount_text">Crea una aquí</string>
+    <string name="tvType_text">Tipo Usuario:</string>
+    <string name="tvProfile_text">Perfil:</string>
+    <string name="tvUserCalification_text">Calificación de usuario</string>
+    <string name="tieNameSignUp_text">Introduce el nombre</string>
+    <string name="tieEmailSignUp_text">Introduce un email</string>
+    <string name="tiePasswordSignUp_text">Introduce una contraseña</string>
+    <string name="tieConfirmPasswordSignUp_text">Confirma tu contraseña</string>
+    <string name="btnCreateAccount_text">Crear Cuenta</string>
+    <string name="title_userlistTitle">Lista Usuarios</string>
+    <string name="toolbar_refresh_title">Refrescar</string>
+    <string name="toolbar_sort_title">Ordenar</string>
+</resources>

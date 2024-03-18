@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tvNoData_text">Aún no hay clientes</string>
+    <string name="tvNoDataSubtitle_text">Toca el botón \"+\" para añadir un cliente</string>
+    <string name="deleteCustomerTitle">Borrar cliente</string>
+    <string name="deleteCustomerMessage">¿Quieres borrar al cliente %s?</string>
+    <string name="tilID">ID</string>
+    <string name="tilName">Name*</string>
+    <string name="tilEmail">Email*</string>
+    <string name="tilPhone">Phone</string>
+    <string name="tilCity">City</string>
+    <string name="tilAddress">Address</string>
+    <string name="tvCustomerInfoTitle_text">Información del cliente</string>
+    <string name="tvCustomerInfoId_text">ID</string>
+    <string name="tvCustomerInfoName_text">Nombre</string>
+    <string name="tvCustomerInfoEmail_text">Correo</string>
+    <string name="tvCustomerInfoPhone_text">Teléfono</string>
+    <string name="tvCustomerInfoAddress_text">Dirección</string>
+    <string name="errEmailFormat">Formato incorrecto</string>
+    <string name="errNameIsMandatory">El nombre no puede estar vacio</string>
+    <string name="errEmailIsMandatory">El email no puede estar vacio</string>
+    <string name="toastDeleteCustomer">%s borrado con éxito</string>
+    <string name="tvCustomerInfoCity_text">Ciudad</string>
+    <string name="errNameIsShort">La longitud del nombre demasiado corto</string>
+    <string name="tbEditCustomer">Editar Cliente</string>
+    <string name="toastCantDeleteCustomer">%s tiene una tarea asignada</string>
+</resources>

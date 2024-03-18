@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tvNoData_margin">16dp</dimen>
+    <dimen name="tvNoDataSubtitle_margin">8dp</dimen>
+    <dimen name="cardView_margin">16dp</dimen>
+    <dimen name="tvTaskInfoTitle_size">18sp</dimen>
+    <dimen name="tvTaskInfoVarTitle_size">14sp</dimen>
+    <dimen name="tvTaskInfoVarValue_size">16sp</dimen>
+    <dimen name="tvTaskInfo_margin">24dp</dimen>
+    <dimen name="tvTaskInfoValue_margin">4dp</dimen>
+    <dimen name="update_task_margin">16sp</dimen>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tvNoData_margin">16dp</dimen>
+    <dimen name="tvNoDataSubtitle_margin">8dp</dimen>
+    <dimen name="til_margin">24dp</dimen>
+    <dimen name="invoiceCreation_text_size">16sp</dimen>
+    <dimen name="invoiceCreation_fab_margin">24dp</dimen>
+    <dimen name="cardView_margin">16dp</dimen>
+</resources>

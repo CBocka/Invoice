@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tvNoData_margin">16dp</dimen>
+    <dimen name="tvNoDataSubtitle_margin">8dp</dimen>
+    <dimen name="cardView_margin">16dp</dimen>
+    <dimen name="tvCustomerInfoTitle_size">18sp</dimen>
+    <dimen name="tvCustomerInfoVarTitle_size">14sp</dimen>
+    <dimen name="tvCustomerInfoVarValue_size">16sp</dimen>
+    <dimen name="tvCustomerInfo_margin">24dp</dimen>
+    <dimen name="tvCustomerInfoValue_margin">4dp</dimen>
+    <dimen name="animCustomerList">50dp</dimen>
+    <dimen name="tvnoDataCustomerList_marginTop">175dp</dimen>
+</resources>

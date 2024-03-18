@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="typeUserArray">
+        <item>User</item>
+        <item>Admin</item>
+        <item>Guest</item>
+        <item>Client</item>
+    </string-array>
+    <string-array name="ringtone_entries">
+        <item>Rosalía</item>
+        <item>Maluma</item>
+        <item>Quevedo</item>
+    </string-array>
+    <string-array name="ringtone_values">
+        <item>ROS</item>
+        <item>MAL</item>
+        <item>QVD</item>
+    </string-array>
+
+    <!-- Arrays for Item Preferences -->
+    <string-array name="itemsOrder_entries">
+        <item>Nombre</item>
+        <item>Precio</item>
+    </string-array>
+    <string-array name="itemsOrder_values">
+        <item>NM</item>
+        <item>PC</item>
+    </string-array>
+    <string-array name="itemsFilter_entries">
+        <item>Productos &amp; Servicios</item>
+        <item>Productos</item>
+        <item>Servicios</item>
+    </string-array>
+    <string-array name="itemsFilter_values">
+        <item>ALL</item>
+        <item>PRO</item>
+        <item>SER</item>
+    </string-array>
+
+    <!-- Arrays for Customer Preferences -->
+    <string-array name="orderby_entries">
+        <item>Name</item>
+        <item>ID</item>
+        <item>Email</item>
+    </string-array>
+    <string-array name="orderby_values">
+        <item>NM</item>
+        <item>ID</item>
+        <item>EM</item>
+    </string-array>
+
+    <!-- Arrays for Task Preferences -->
+    <string-array name="tasksOrder_entries">
+        <item>Nombre</item>
+        <item>Contacto</item>
+        <item>Fecha</item>
+    </string-array>
+    <string-array name="tasksOrder_values">
+        <item>NM</item>
+        <item>CT</item>
+        <item>DT</item>
+    </string-array>
+    <string-array name="tasksFilter_entries">
+        <item>Todas</item>
+        <item>Completadas</item>
+        <item>Pendientes</item>
+    </string-array>
+    <string-array name="tasksFilter_values">
+        <item>ALL</item>
+        <item>COM</item>
+        <item>PEN</item>
+    </string-array>
+
+    <!-- Arrays for Invoice Preferences -->
+    <string-array name="invoiceOrder_entries">
+        <item>Nombre Cliente</item>
+        <item>Nombre Factura</item>
+    </string-array>
+    <string-array name="invoiceOrder_values">
+        <item>NM</item>
+        <item>ID</item>
+    </string-array>
+</resources>
+

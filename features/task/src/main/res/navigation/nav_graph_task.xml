@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/nav_graph_task"
+    app:startDestination="@id/taskListFragment">
+
+    <fragment
+        app:moduleName="task"
+        android:label="@string/title_taskcreation"
+        android:id="@+id/taskCreationFragment"
+        android:name="com.hamilton.task.ui.TaskCreationFragment" >
+        <action
+            android:id="@+id/action_taskCreationFragment_to_oneOptionDialog"
+            app:destination="@id/oneOptionDialog" />
+    </fragment>
+    <fragment
+        app:moduleName="task"
+        android:label="@string/title_taskdetail"
+        android:id="@+id/taskDetailFragment"
+        android:name="com.hamilton.task.ui.TaskDetailFragment" >
+        <action
+            android:id="@+id/action_taskDetailFragment_to_taskUpdateFragment"
+            app:destination="@id/taskUpdateFragment" />
+    </fragment>
+    <fragment
+        app:moduleName="task"
+        android:label="@string/title_tasklist"
+        android:id="@+id/taskListFragment"
+        android:name="com.hamilton.task.ui.TaskListFragment" >
+        <action
+            android:id="@+id/action_taskListFragment_to_taskDetailFragment"
+            app:destination="@id/taskDetailFragment" />
+        <action
+            android:id="@+id/action_taskListFragment_to_taskCreationFragment"
+            app:destination="@id/taskCreationFragment" />
+        <action
+            android:id="@+id/action_taskListFragment_to_baseFragmentDialog"
+            app:destination="@id/baseFragmentDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/baseFragmentDialog"
+        android:name="com.hamilton.invoice.base.BaseFragmentDialog"
+        android:label="BaseFragmentDialog" />
+    <dialog
+        android:id="@+id/oneOptionDialog"
+        android:name="OneOptionDialog"
+        android:label="OneOptionDialog" />
+    <fragment
+        android:id="@+id/taskUpdateFragment"
+        android:name="com.hamilton.task.ui.TaskUpdateFragment"
+        android:label="@string/title_taskupdate"
+        tools:layout="@layout/fragment_task_update" />
+
+</navigation>

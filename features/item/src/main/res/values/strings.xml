@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tvNoData_text">Aún no hay artículos</string>
+    <string name="tvNoDataSubtitle_text">Toca el botón \"+\" para añadir un artículo</string>
+    <string name="tilItemId">Introduce el ID</string>
+    <string name="tilItemName">Introduce el nombre</string>
+    <string name="tilItemPrice">Introduce el precio</string>
+    <string name="tilItemType">Introduce la categoría</string>
+    <string name="tilItemDesc">Introduce una descripción</string>
+    <string name="tilItemTax">Introduce el IVA</string>
+    <string name="switchItemTaxable_text">¿El artículo está sujeto a impuestos?</string>
+    <string name="tvItemInfoName_text">Nombre</string>
+    <string name="tvItemInfoId_text">ID</string>
+    <string name="tvItemInfoPrice_text">Precio</string>
+    <string name="tvItemInfoType_text">Tipo</string>
+    <string name="tvItemInfoDescription_text">Descripción del artículo</string>
+    <string name="tvItemInfoTaxable_text">Sujeto a impuestos</string>
+    <string name="tvItemInfoTax_text">IVA</string>
+    <string name="toolbar_refresh_title">Refrescar</string>
+    <string name="toolbar_sort_title">Ordenar</string>
+    <string name="toolbar_edit_title">Editar</string>
+    <string name="toolbar_settings_title">Item Preferences</string>
+
+    <string name="dialogDeleteItem_title">Eliminar artículo</string>
+    <string name="dialogDeleteItem_message">¿Seguro que quiere eliminar el artículo?</string>
+
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/nav_graph_invoice"
+    app:startDestination="@id/invoiceListFragment">
+
+    <fragment
+        app:moduleName="featureinvoice"
+        android:label="@string/title_invoicecreation"
+        android:id="@+id/invoiceCreationFragment"
+        android:name="com.hamilton.featureinvoice.ui.InvoiceCreationFragment" />
+    <fragment
+        app:moduleName="featureinvoice"
+        android:label="@string/title_invoicedetail"
+        android:id="@+id/invoiceDetailFragment"
+        android:name="com.hamilton.featureinvoice.ui.InvoiceDetailFragment" >
+        <action
+            android:id="@+id/action_invoiceDetailFragment_to_invoiceCreationFragment"
+            app:destination="@id/invoiceCreationFragment" />
+    </fragment>
+    <fragment
+        app:moduleName="featureinvoice"
+        android:label="@string/title_invoicelist"
+        android:id="@+id/invoiceListFragment"
+        android:name="com.hamilton.featureinvoice.ui.InvoiceListFragment">
+        <action
+            android:id="@+id/action_InvoiceListFragment_to_invoiceCreationFragment"
+            app:destination="@+id/invoiceCreationFragment" />
+        <action
+            android:id="@+id/action_InvoiceListFragment_to_invoiceDetailFragment"
+            app:destination="@+id/invoiceDetailFragment" />
+        <action
+            android:id="@+id/action_invoiceListFragment_to_baseFragmentDialog"
+            app:destination="@id/baseFragmentDialog" />
+        <action
+            android:id="@+id/action_invoiceListFragment_to_fragmentProgressDialog"
+            app:destination="@id/fragmentProgressDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/baseFragmentDialog"
+        android:name="com.hamilton.invoice.base.BaseFragmentDialog"
+        android:label="BaseFragmentDialog" />
+    <dialog
+        android:id="@+id/fragmentProgressDialog"
+        android:name="com.hamilton.invoice.base.FragmentProgressDialog"
+        android:label="FragmentProgressDialog" />
+
+</navigation>

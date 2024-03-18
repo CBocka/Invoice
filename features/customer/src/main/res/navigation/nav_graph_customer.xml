@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/nav_graph_customer"
+    app:startDestination="@id/customerListFragment">
+
+    <fragment
+        app:moduleName="customer"
+        android:label="@string/title_customerlist"
+        android:id="@+id/customerListFragment"
+        android:name="com.hamilton.customer.ui.CustomerListFragment">
+        <action
+            android:id="@+id/action_CustomerListFragment_to_featureCustomerCreation"
+            app:destination="@+id/customerCreationFragment" />
+        <action
+            android:id="@+id/action_CustomerListFragment_to_featureCustomerDetail"
+            app:destination="@+id/customerDetailFragment" />
+        <action
+            android:id="@+id/action_CustomerListFragment_to_CustomerDialogFragment"
+            app:destination="@+id/customerDialogFragment" />
+        <action
+            android:id="@+id/action_customerListFragment_to_fragmentProgressDialog"
+            app:destination="@id/fragmentProgressDialog" />
+    </fragment>
+    <dialog
+        app:moduleName="customerdialogfragment"
+        android:label="@string/title_customerdialogfragment"
+        android:id="@+id/customerDialogFragment"
+        android:name="com.hamilton.customer.ui.CustomerBaseFragmentDialog"/>
+    <fragment
+        app:moduleName="customer"
+        android:label="@string/title_customercreation"
+        android:id="@+id/customerCreationFragment"
+        android:name="com.hamilton.customer.ui.CustomerCreationFragment">
+    </fragment>
+    <fragment
+        app:moduleName="customer"
+        android:label="@string/title_customerdetail"
+        android:id="@+id/customerDetailFragment"
+        android:name="com.hamilton.customer.ui.CustomerDetailFragment" >
+        <action
+            android:id="@+id/action_customerDetailFragment_to_customerCreationFragment"
+            app:destination="@id/customerCreationFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/fragmentProgressDialog"
+        android:name="com.hamilton.invoice.base.FragmentProgressDialog"
+        android:label="FragmentProgressDialog" />
+</navigation>

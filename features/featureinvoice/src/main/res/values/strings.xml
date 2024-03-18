@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tvNoDataSubtitle_text">Toca el botón \"+\" para añadir una Factura</string>
+    <string name="tilInvoiceCliente">Introduce el nombre del Cliente</string>
+    <string name="tilInvoiceFactura">Introduce el nombre de la Factura</string>
+    <string name="tilInvoiceFechaE">Fecha de emisión</string>
+    <string name="deleteFacturaTitle">Borrar factura</string>
+    <string name="deleteFacturaMessage">¿Quieres borrar la Factura %s?</string>
+    <string name="toastDeleteFactura">%s borrada con éxito</string>
+    <string name="tvNoData_text">Aún no hay Facturas</string>
+    <string name="errIsMandatory">El campo es obligatorio</string>
+    <string name="errNotValidFormat">El formato no es válido</string>
+    <string name="tilInvoiceFecha">Elige fecha</string>
+    <string name="tilInvoiceFechaV">Fecha de Vencimiento</string>
+    <string name="btAñadirCliente">Añadir Cliente</string>
+    <string name="btAñadirArticulo">Añadir Articulo</string>
+    <string name="IntroduceFactura">O introducela manualmente</string>
+    <string name="titleEditInvoice">Editar Factura</string>
+    <string name="btBorrarCliente">Borrar cliente</string>
+    <string name="btBorrarArticulo">Borrar articulo</string>
+    <string name="errEndDateMustBeMoreRecentThanCreationDate">La fecha de inicio no puede ser mayor que la de final</string>
+</resources>

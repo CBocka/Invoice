@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CustomerDetailFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:layout_marginHorizontal="@dimen/cardView_margin"
+        android:layout_marginTop="@dimen/cardView_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvCustomerInfoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvCustomerInfoTitle_text"
+                android:textSize="@dimen/tvCustomerInfoTitle_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvCustomerInfoId"
+                android:layout_width="26dp"
+                android:layout_height="17dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/tvCustomerInfoId_text"
+                android:textSize="@dimen/tvCustomerInfoVarTitle_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvCustomerInfoTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerInfoTitle" />
+
+            <TextView
+                android:id="@+id/tvCustomerInfoIdValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="558743"
+                android:textSize="@dimen/tvCustomerInfoVarValue_size"
+                app:layout_constraintStart_toStartOf="@+id/tvCustomerInfoId"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerInfoId" />
+
+
+            <TextView
+                android:id="@+id/tvCustomerInfoName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvCustomerInfoName_text"
+                android:textSize="@dimen/tvCustomerInfoVarTitle_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvCustomerInfoIdValue"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerInfoIdValue" />
+
+            <TextView
+                android:id="@+id/tvCustomerInfoNameValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Christian Gaitan Cabello"
+                android:textSize="@dimen/tvCustomerInfoVarValue_size"
+                app:layout_constraintStart_toStartOf="@+id/tvCustomerInfoName"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerInfoName" />
+
+            <TextView
+                android:id="@+id/tvCustomerInfoEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvCustomerInfoEmail_text"
+                android:textSize="@dimen/tvCustomerInfoVarTitle_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvCustomerInfoNameValue"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerInfoNameValue" />
+
+            <TextView
+                android:id="@+id/tvCustomerInfoEmailValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="christiangatiancabello@gmail.com"
+                android:textSize="@dimen/tvCustomerInfoVarValue_size"
+                app:layout_constraintStart_toStartOf="@+id/tvCustomerInfoEmail"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerInfoEmail" />
+
+            <TextView
+                android:id="@+id/tvCustomerInfoPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvCustomerInfoPhone_text"
+                android:textSize="@dimen/tvCustomerInfoVarTitle_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvCustomerInfoEmailValue"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerInfoEmailValue" />
+
+            <TextView
+                android:id="@+id/tvCustomerInfoPhoneValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="667863526"
+                android:textSize="@dimen/tvCustomerInfoVarValue_size"
+                app:layout_constraintStart_toStartOf="@+id/tvCustomerInfoPhone"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerInfoPhone" />
+
+            <TextView
+                android:id="@+id/tvCustomerCityPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvCustomerInfoCity_text"
+                android:textSize="@dimen/tvCustomerInfoVarTitle_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvCustomerInfoPhoneValue"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerInfoPhoneValue" />
+
+            <TextView
+                android:id="@+id/tvCustomerInfoCityValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Málaga"
+                android:textSize="@dimen/tvCustomerInfoVarValue_size"
+                app:layout_constraintStart_toStartOf="@+id/tvCustomerCityPhone"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerCityPhone" />
+
+            <TextView
+                android:id="@+id/tvCustomerAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/tvCustomerInfoAddress_text"
+                android:textSize="@dimen/tvCustomerInfoVarTitle_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvCustomerInfoCityValue"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerInfoCityValue" />
+
+            <TextView
+                android:id="@+id/tvCustomerInfoAddressValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="Portada Alta"
+                android:textSize="@dimen/tvCustomerInfoVarValue_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvCustomerAddress"
+                app:layout_constraintTop_toBottomOf="@+id/tvCustomerAddress" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="124dp"
+                android:layout_height="124dp"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivIcono"
+                    android:layout_width="124dp"
+                    android:layout_height="124dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/customer" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageViewEditor"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_editbutton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="Default value"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:key="@string/key_account_usu"
+        android:title="@string/account_usu_title"
+        android:summary="" />
+    <EditTextPreference
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="Default value"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:key="@string/key_account_ps"
+        android:title="@string/account_ps_title" />
+</PreferenceScreen>

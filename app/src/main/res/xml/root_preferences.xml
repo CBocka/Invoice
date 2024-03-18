@@ -1,0 +1,106 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/category_user">
+        <Preference
+            android:icon="@drawable/ic_account"
+            android:key="@string/key_account"
+            android:summary="@string/summary_account"
+            android:title="@string/title_account" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/category_notification">
+
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:key="@string/key_active_notifications"
+            android:title="@string/title_active_notifications" />
+        <ListPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="1"
+            android:entries="@array/ringtone_entries"
+            android:entryValues="@array/ringtone_values"
+            android:key="@string/key_ringtone"
+            android:title="@string/title_ringtone" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/category_theme">
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:key="@string/key_dark_theme"
+            android:title="@string/title_dark_theme" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/category_title">
+
+        <ListPreference
+            app:entries="@array/itemsOrder_entries"
+            app:entryValues="@array/itemsOrder_values"
+            app:key="@string/key_order"
+            app:title="@string/title_order"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:entries="@array/itemsFilter_entries"
+            app:entryValues="@array/itemsFilter_values"
+            app:key="@string/key_filter"
+            app:title="@string/title_filter"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/category_title_customer">
+        <EditTextPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="Default value"
+            android:key="@string/customer_df_name"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary=""
+            android:title="@string/customer_df_name_title" />
+
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:key="@string/key_active_create"
+            android:title="@string/title_active_create" />
+        <ListPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="1"
+            android:entries="@array/orderby_entries"
+            android:entryValues="@array/orderby_values"
+            android:key="@string/key_orderby"
+            android:title="@string/title_orderby" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/task_category_title">
+
+        <ListPreference
+            app:entries="@array/tasksOrder_entries"
+            app:entryValues="@array/tasksOrder_values"
+            app:key="@string/task_key_order"
+            app:title="@string/title_order"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:entries="@array/tasksFilter_entries"
+            app:entryValues="@array/tasksFilter_values"
+            app:key="@string/task_key_filter"
+            app:title="@string/task_title_filter"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/invoice_category_title">
+        <ListPreference
+            app:entries="@array/invoiceOrder_entries"
+            app:entryValues="@array/invoiceOrder_values"
+            app:key="@string/invoice_key_order"
+            app:title="@string/invoice_title_order"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

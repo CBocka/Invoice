@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.hamilton.customer.usecase.CustomerCreationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.hamilton.customer.ui.CustomerCreationFragment"
+        android:padding="@dimen/fab_margin">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tilName"
+            app:errorEnabled="true"
+            app:startIconDrawable="@drawable/ic_customername">>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.name}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tilEmail"
+            app:errorEnabled="true"
+            app:startIconDrawable="@drawable/ic_customeremail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietEmail"
+                android:layout_width="match_parent"
+                android:text="@={viewmodel.email}"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tilPhone"
+            app:startIconDrawable="@drawable/ic_customerphone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietPhone"
+                android:phoneNumber="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tilCity"
+            app:startIconDrawable="@drawable/ic_customercitys">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tilAddress"
+            app:startIconDrawable="@drawable/ic_customeradress">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabCreationCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="@{() -> viewmodel.validateCredentials()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_createcustomer" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>
